@@ -1,0 +1,41 @@
+  ul.topnav {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #2F4F4F;
+  }
+  ul.topnav li a {
+    
+	display: block;
+    color: white;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    /*padding-bottom: 2vw;*/
+    text-decoration: none;
+  }
+  
+  ul.topnav li a:hover:not(.active) {background-color:lightslategray;}
+  
+  ul.topnav li a.active {background-color:mediumslateblue;}
+  
+  
+  
+@media all and (orientation:landscape)
+{
+	ul.topnav 
+	{		
+			
+			height: 8vh;
+			/*width: 5vw;*/
+			position: fixed;
+			z-index: 1;
+			/*top: 85vh;
+			left: 93vw;*/
+			top: 15vh;
+			left: 0;
+			background-color: #2F4F4F;
+			overflow-x: hidden;
+			border-radius: 28px;	
+	}
+} 
