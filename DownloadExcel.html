@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Student Management System/Login</title>
+	<link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Arvo">
+	<link rel="stylesheet"  href="css/downloadExcel.css" /> 
+	<script src="js/downloadExcel.js"></script>
+</head>
+<body>
+<center>
+<form id="regForm" method="POST" action="downloadExcel.php">
+  <table>
+        <th colspan="3" >
+               <h2> SELECT FIELDS </h2>
+        </th>
+        <tr>
+            <td>
+                <select>
+                    <option onclick="selectAll(true)" id="selectAll" name="selectAll" checked>SELECT ALL</option>
+                    <option onclick="selectAll(false)" id="selectNone" id="selectNone">SELECT NONE</option>
+                </select>
+                <br>
+                <br>
+            </td>
+            <td colspan="2">
+                <input type="submit" style="float:right;background-color: mediumslateblue;"class="sub" name="down1"  value="Submit" /><br><br>
+			</td>
+        </tr>
+        <tr>
+            <td>Enrollment ID </td>
+            <td></td>
+            <td><input class="CheckClass"  type="checkbox" name="1" id="EnrollmentId" value="EnrollmentId"/></td>
+        </tr>
+        <tr>
+            <td>Surname</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox"   name="2" id="Surname" value="Surname"/></td>
+        </tr>
+        <tr>
+            <td>First Name</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="3"  id="firstname" value="firstname"/></td>
+        </tr>
+        <tr>
+            <td>Second Name</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="4"   id="secondname" value="secondname"/></td>
+        </tr>
+        <tr>
+            <td>Mother Name</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="5"  id="mothername" value="mothername"/></td>
+        </tr>
+        <tr>
+            <td>Adhaarcard Number </td>
+            <td></td>
+            <td><input class="CheckClass"  type="checkbox" name="6" id="AadhaarNumber" value="AadhaarNumber"/></td>
+        </tr>
+        <tr>
+            <td>Permanent Address</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox"  name="7" id="permanentAddress" value="permanentAddress"/></td>
+        </tr>
+        <tr>
+            <td>Permanent City</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="8"  id="permanentCity" value="permanentCity"/></td>
+
+        </tr>
+        <tr>
+            <td>Permanent Pincode</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="9"  value="permanentPincode"id="permanentPincode"/></td>
+        </tr>
+        <tr>
+            <td>Permanent Phone</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="10"  value="permanentPhone" id="permanentPhone"/></td>
+        </tr>
+        <tr>
+            <td>Permanent Mobile</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="11"  value="permanentMobile" id="permanentMobile"/></td>
+        </tr>
+        <tr>
+            <td>Correspondance Address</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="12"  value="correspondanceAddress" id="correspondanceAddress"/></td>
+        </tr>
+        <tr>
+            <td>Correspondance City</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="13"  value="correspondanceCity" id="correspondanceCity"/></td>
+        </tr>
+        <tr>
+            <td>Correspondance Pincode</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="14"  value="correspondancePincode" id="correspondancePincode"/></td>
+        </tr>
+        <tr>
+            <td>Correspondance Phone</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="15"  value="correspondancePhone" id="correspondancePhone"/></td>
+        </tr>
+        <tr>
+            <td>Correspondance Mobile</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="16" value="correspondanceMobile" id="correspondanceMobile"/></td>
+        </tr>
+        <tr>
+            <td>Date Of Birth</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="17"  value="dob" id="dob"/></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td><select name="18_1" id="18_1">
+                <option value="All" selected="">All</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select></td>
+            <td><input class="CheckClass" type="checkbox" name="18" value="gender" id="gender"/></td>
+
+        </tr>
+        <tr>
+            <td>Ph</td>
+            <td><select name="19_1" id="19_1">
+                <option value="All" selected="">All</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select></td>
+            <td><input class="CheckClass" type="checkbox" name="19" value="ph" id="ph"/></td>
+        </tr>
+        <tr>
+            <td>Nationality</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="20" value="nationality"  id="nationality"/></td>
+        </tr>
+        <tr>
+            <td>Caste</td>
+            <td><select name="21_1" id="21_1">
+                <option value="All" selected="">All</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select></td>
+            <td><input class="CheckClass" type="checkbox" name="21" value="caste"  id="caste"/></td>
+        </tr>
+        <tr>
+            <td>Sub Caste</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="22" value="subCaste"  id="subCaste"/></td>
+        </tr>
+        <tr>
+            <td>Minority</td>
+            <td><select name="23_1" id="23_1">
+                <option value="All" selected="">All</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select></td>
+            <td><input class="CheckClass" type="checkbox" name="23" value="minority"  id="minority"/></td>
+        </tr>
+        <tr>
+            <td>Religion</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="24" value="religion"  id="religion"/></td>
+        </tr>
+        <tr>
+            <td>Board Name</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="25" value="boardName"   id="boardName"/></td>
+        </tr>
+        <tr>
+            <td>HSC Seat No.</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="26" value="hscSeatNumber"  id="hscSeatNumber"/></td>
+        </tr>
+        <tr>
+            <td>Admission Quota</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="27" value="admissionQuota"  id="admissionQuota"/></td>
+        </tr>
+        <tr>
+            <td>Exam Center</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="28" value="examCenter"  id="examCenter"/></td>
+        </tr>
+        <tr>
+            <td>Year Of Passing</td>
+            <td><input type="text" name="t1" id="t1" disabled="true" />
+                <select name="29_1" id="29_1" onchange="myfun()">
+                <option value="All" selected>All</option>
+                <option value="Between">Between</option>
+                <option value="LandE"> <= </option>
+                <option value="GandE"> >= </option>
+            </select><input type="text" name="t2" id="t2" disabled="true" /></td>
+            <script type="text/javascript">
+                function myfun()
+                {
+                    if (document.getElementById("29_1").value === "All")
+                    {
+                        document.getElementById("t1").disabled=true;
+                        document.getElementById("t2").disabled=true;
+                    }
+                    else if (document.getElementById("29_1").value === "Between")
+                    {
+                        document.getElementById("t1").disabled=false;
+                        document.getElementById("t2").disabled=false;
+                    }
+                    else if (document.getElementById("29_1").value === "LandE")
+                    {
+                        document.getElementById("t1").disabled=true;
+                        document.getElementById("t2").disabled=false;
+                    }
+                    else if (document.getElementById("29_1").value === "GandE")
+                    {
+                        document.getElementById("t1").disabled=true;
+                        document.getElementById("t2").disabled=false;
+                    }
+                }
+            </script>
+            <td><input class="CheckClass" type="checkbox" name="29" value="yearOfPassing"  id="yearOfPassing"/></td>
+        </tr>
+        <tr>
+            <td>School Name</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="30" value="schoolName"  id="schoolName"/></td>
+        </tr>
+        <tr>
+            <td>Marks Info</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="31" value="marksInfo"  id="marksInfo"/></td>
+        </tr>
+        <tr>
+            <td>Obtained Marks</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="32" value="obtainedMarks"  id="obtainedMarks"/></td>
+        </tr>
+        <tr>
+            <td>Total Marks</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="33" value="totalMarks"  id="totalMarks"/></td>
+        </tr>
+        <tr>
+            <td>GSEB</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="34" value="gseb"  id="gseb"/></td>
+        </tr>
+        <tr>
+            <td>PecNumber</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="35" value="pecNumber"  id="pecNumber"/></td>
+        </tr>
+        <tr>
+            <td>PecDate</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="36" value="pecDate"  id="pecDate"/></td>
+        </tr>
+        <tr>
+            <td>FecNumber</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="37" value="fecNumber"  id="fecNumber"/></td>
+        </tr>
+        <tr>
+            <td>FecDate</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="38" value="fecDate"  id="fecDate"/></td>
+        </tr>
+        <tr>
+            <td>College Name</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="39" value="collegeName"  id="collegeName"/></td>
+        </tr>
+        <tr>
+            <td>College Code</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox"  name="40" value="collegeCode" id="collegeCode"/></td>
+        </tr>
+        <tr>
+            <td>Admission Year</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="41" value="admissionYear"  id="admissionYear"/></td>
+        </tr>
+        <tr>
+            <td>Faculty</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="42" value="faculty"  id="faculty"/></td>
+        </tr>
+        <tr>
+            <td>Course Name</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="43" value="courseName"  id="courseName"/></td>
+        </tr>
+        <tr>
+            <td>Course Year</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="44" value="courseYear"  id="courseYear"/></td>
+        </tr>
+        <tr>
+            <td>Faculty Code</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="45" value="facultyCode"  id="facultyCode"/></td>
+        </tr>
+        <tr>
+            <td>Course Code</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="46" value="courseCode"  id="courseCode"/></td>
+        </tr>
+        <tr>
+            <td>Search Key</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="47" value="searchKey"  id="searchKey"/></td>
+        </tr>
+        <tr>
+            <td>Form No.</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="48" value="FormNumber"  id="FormNumber"/></td>
+        </tr>
+        <tr>
+            <td>Email ID</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="49" value="EmailId"  id="EmailId"/></td>
+        </tr>
+        <tr>
+            <td>NEET Exam Roll No.</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="50" value="NEETExamRollNo"  id="NEETExamRollNo"/></td>
+        </tr>
+        <tr>
+            <td>NEET Exam Year</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="51" value="NEETExamYear"  id="NEETExamYear"/></td>
+        </tr>
+        <tr>
+            <td>NEET Exam Obtained Marks</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="52" value="NEETObtainedMarks"  id="NEETObtainedMarks"/></td>
+        </tr>
+        <tr>
+            <td>NEET Total Marks</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="53" value="NEETTotalMarks"  id="NEETTotalMarks"/></td>
+        </tr>
+        <tr>
+            <td>NEET Percentage</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="54" value="NEETPercentage"  id="NEETPaercentage"/></td>
+        </tr>
+        <tr>
+            <td>NEET Percentile</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="55" value="NEETPercentile"  id="NEETPercentile"/></td>
+        </tr>
+        <tr>
+            <td>Bank Account No.</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="56" value="BankAccountNo"  id="BankAccountNo"/></td>
+        </tr>
+        <tr>
+            <td>Bank Name</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="57" value="BankName"  id="BankName"/></td>
+        </tr>
+        <tr>
+            <td>IFSC No.</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="58" value="IFSCNo"  id="IFSCNo"/></td>
+        </tr>
+        <tr>
+            <td>First Year Result</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="59" value="FirstYearResult"  id="FristYearResult"/></td>
+        </tr>
+        <tr>
+            <td>Clinical Batch No.</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="60" value="ClinicalBatchNo"  id="ClinicalBatchNo"/></td>
+        </tr>
+        <tr>
+            <td>Second Year Result</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="61" value="SecondYearResult"  id="SecondYearResult"/></td>
+        </tr>
+        <tr>
+            <td>Third Year Part-1 Result</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="62" value="ThirdYearPart1Result"  id="ThirdYearPart1Result"/></td>
+        </tr>
+        <tr>
+            <td>Third Year Part-2 Result</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="63" value="ThirdYearPart2Result"  id="ThirdYearPart2Result"/></td>
+        </tr>
+        <tr>
+            <td>Internship Order No.</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="64" value="InternshipOrderNo"  id="InternshipOrderNo"/></td>
+        </tr>
+        <tr>
+            <td>UG Bond Solvancy Name</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="65" value="UGBondSolvancyName"  id="UGBondSolvancyName"/></td>
+        </tr>
+        <tr>
+            <td>UG Bank Gaurantee</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="66" value="UGBankGaurantee"  id="UGBankGaurantee"/></td>
+        </tr>
+        <tr>
+            <td>UG Bond Surity Address</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="67" value="UGBondSurityAddress"  id="UGBondSurityAddress"/></td>
+        </tr>
+        <tr>
+            <td>UG Bond Surity Phone</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="68" value="UGBondSurityPhone"  id="UGBondSurityPhone"/></td>
+        </tr>
+        <tr>
+            <td>UG Bond Surity Mobile</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="69" value="UGBondSurityemailid"  id="UGBondSurityemailid"/></td>
+        </tr>
+        <tr>
+            <td>UG Bond Amount</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="70" value="UGBondAmount"  id="UGBondAmount"/></td>
+        </tr>
+        <tr>
+            <td>UG Bond Paid Amount</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="71" value="UGBondPaidAmount"  id="UGBondPaidAmount"/></td>
+        </tr>
+        <tr>
+            <td>Recovery Bond Amount</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="72" value="RecoveryBondAmount"  id="RecoveryBondAmount"/></td>
+        </tr>
+        <tr>
+            <td>UG Bond Paid Challan No.</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="73" value="UGBondPaidChallanNo"  id="UGBondPaidChallanNo"/></td>
+        </tr>
+        <tr>
+            <td>UG Bond Paid Challan Date</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="74" value="UGBondPaidChallanDate"  id="UGBondPaidChallanDate"/></td>
+        </tr>
+        <tr>
+            <td>Mamlatdar Case Number</td>
+            <td></td>
+            <td><input class="CheckClass" type="checkbox" name="75" value="MamlatdarCaseNo"  id="MamlatdarCaseNo"/></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+				</br>
+                <input type="submit" style="float: right;background-color: mediumslateblue;"class="sub" name="down1"  value="Submit" /><br><br>
+				</br>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</body>
+</html>
